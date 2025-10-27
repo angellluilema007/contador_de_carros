@@ -1,0 +1,18 @@
+# Requirements for contador-de-carros
+# Note: installing torch may require choosing the correct wheel for your OS/GPU.
+# See https://pytorch.org/get-started/locally for platform-specific instructions.
+
+opencv-python
+numpy
+pandas
+matplotlib
+pillow
+mpmath
+requests
+scipy
+tqdm
+seaborn
+ultralytics
+# PyTorch - may require platform-specific wheel (CPU/GPU). If this fails, follow PyTorch website instructions.
+torch
+torchvision
