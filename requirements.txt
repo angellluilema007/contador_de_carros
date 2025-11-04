@@ -5,6 +5,7 @@
 opencv-python
 numpy
 pandas
+openpyxl>=3.1.2
 matplotlib
 pillow
 mpmath
@@ -16,3 +17,4 @@ ultralytics
 # PyTorch - may require platform-specific wheel (CPU/GPU). If this fails, follow PyTorch website instructions.
 torch
 torchvision
+# Tkinter video player: ya no requerido; usamos un fallback con OpenCV+Pillow en paravideo.py

@@ -1,0 +1,4 @@
+para unir los paper
+primero seria el login.py y despues que me deje ingresar 
+para esocger el paravideo.py y de ahi escoger las coordinates.py y que empiece a 
+count_cars.py 
