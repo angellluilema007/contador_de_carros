@@ -1,7 +1,29 @@
 [project]
 name = "contador-de-carros"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Sistema de Conteo Vehicular Inteligente con IA utilizando YOLO"
 readme = "README.md"
-requires-python = ">=3.12"
+authors = [
+    {name = "Angel Lluilema", email = "angel.lluilema@example.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.8"
 dependencies = []
+keywords = ["yolo", "computer-vision", "vehicle-detection", "traffic-analysis", "deep-learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+[project.urls]
+Homepage = "https://github.com/angellluilema007/contador_de_carros"
+Repository = "https://github.com/angellluilema007/contador_de_carros"

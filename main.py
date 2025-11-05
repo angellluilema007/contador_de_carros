@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Contador de Carros - Sistema de Conteo de Vehículos con YOLO
+Copyright (c) 2025 Angel Lluilema
+Todos los derechos reservados.
+"""
+
 import subprocess
 import sys
 

@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Reproductor de Video - Contador de Carros
+Copyright (c) 2025 Angel Lluilema
+Todos los derechos reservados.
+"""
+
 import os
 import tkinter as tk
 import tkinter.ttk as ttk

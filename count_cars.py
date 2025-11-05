@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Contador de Carros - Motor de Detección y Conteo de Vehículos
+Copyright (c) 2025 Angel Lluilema
+Todos los derechos reservados.
+"""
+
 import cv2
 from matplotlib.path import Path
 import torch

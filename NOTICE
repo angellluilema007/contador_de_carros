@@ -1,0 +1,73 @@
+CONTADOR DE CARROS - SISTEMA DE CONTEO VEHICULAR CON IA
+Copyright (c) 2025 Angel Lluilema
+Todos los derechos reservados.
+
+================================================================================
+
+Este software y todos sus componentes están protegidos por derechos de autor.
+
+AUTOR:
+  Angel Lluilema
+
+AÑO:
+  2025
+
+PROYECTO:
+  Prometheo - Sistema de Conteo Vehicular Inteligente
+
+LICENCIA:
+  MIT License (ver archivo LICENSE para detalles completos)
+
+DESCRIPCIÓN:
+  Sistema avanzado de visión por computadora para detección y conteo
+  automático de vehículos utilizando redes neuronales profundas (YOLO)
+  y algoritmos de seguimiento en tiempo real (SORT).
+
+COMPONENTES PRINCIPALES:
+  - main.py           : Punto de entrada del sistema
+  - login.py          : Sistema de autenticación
+  - paravideo.py      : Reproductor de videos
+  - coordinates.py    : Selector de áreas de conteo
+  - count_cars.py     : Motor de detección y conteo
+  - sort.py           : Algoritmo de seguimiento
+
+TECNOLOGÍAS UTILIZADAS:
+  - Python 3.8+
+  - PyTorch / Ultralytics YOLO
+  - OpenCV
+  - NumPy, Pandas
+  - Tkinter
+
+AGRADECIMIENTOS:
+  Este proyecto utiliza las siguientes bibliotecas de código abierto:
+  
+  - YOLO (Ultralytics)
+    https://github.com/ultralytics/ultralytics
+    Licensed under AGPL-3.0
+  
+  - SORT (Simple Online and Realtime Tracking)
+    Copyright (c) 2016-2020 Alex Bewley
+    Licensed under GPL-3.0
+  
+  - OpenCV
+    https://opencv.org
+    Licensed under Apache License 2.0
+  
+  - PyTorch
+    https://pytorch.org
+    Licensed under BSD-style license
+
+AVISO LEGAL:
+  Este software se proporciona "tal cual", sin garantía de ningún tipo,
+  expresa o implícita, incluyendo pero no limitado a las garantías de
+  comerciabilidad, idoneidad para un propósito particular y no infracción.
+  
+  En ningún caso los autores o titulares de los derechos de autor serán
+  responsables de cualquier reclamo, daños u otra responsabilidad.
+
+Para más información, consulte el archivo LICENSE.
+
+================================================================================
+
+Desarrollado con ❤️ por Angel Lluilema
+Proyecto Prometheo - 2025

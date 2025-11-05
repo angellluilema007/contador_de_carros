@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Sistema de Autenticación - Contador de Carros
+Copyright (c) 2025 Angel Lluilema
+Todos los derechos reservados.
+"""
+
 import tkinter as tk
 from tkinter import messagebox
 import hashlib, json, os

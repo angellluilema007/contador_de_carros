@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Sistema de Selección de Coordenadas - Contador de Carros
+Copyright (c) 2025 Angel Lluilema
+Todos los derechos reservados.
+"""
+
 import cv2
 import numpy as np
 
