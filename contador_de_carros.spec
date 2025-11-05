@@ -15,33 +15,59 @@ a = Analysis(
     datas=[
         # Incluir archivos de recursos
         ('recursos', 'recursos'),
-        ('yolo*.pt', '.'),  # Incluir modelos YOLO
+        # Incluir modelos YOLO específicos (PyInstaller no soporta wildcards)
+        ('yolo11m.pt', '.'),
+        ('yolo11n.pt', '.'),
+        ('yolov8m.pt', '.'),
+        ('yolov5n.pt', '.'),
+        # Archivos de configuración
         ('usuarios.json', '.'),
-        # Incluir otros scripts Python que se ejecutan desde main.py
-        ('login.py', '.'),
-        ('paravideo.py', '.'),
-        ('coordinates.py', '.'),
-        ('count_cars.py', '.'),
-        ('sort.py', '.'),
+        # Documentación y licencias
+        ('LICENSE', '.'),
+        ('COPYRIGHT.md', '.'),
+        ('README.md', '.'),
     ],
     hiddenimports=[
+        # Procesamiento de imágenes y video
         'cv2',
         'numpy',
+        'PIL',
+        'PIL.Image',
+        'PIL.ImageTk',
+        # Análisis de datos
         'pandas',
         'openpyxl',
+        # Visualización
         'matplotlib',
-        'PIL',
+        'matplotlib.pyplot',
+        'matplotlib.backends.backend_tkagg',
+        'seaborn',
+        # GUI
         'tkinter',
+        'tkinter.ttk',
+        'tkinter.filedialog',
+        'tkinter.messagebox',
+        # Deep Learning
         'ultralytics',
+        'ultralytics.engine',
+        'ultralytics.models',
+        'ultralytics.models.yolo',
         'torch',
         'torchvision',
+        'torch.nn',
+        'torch.nn.functional',
+        # Procesamiento científico
         'scipy',
-        'seaborn',
-        'sklearn',
-        'sklearn.utils._cython_blas',
-        'sklearn.neighbors.typedefs',
-        'sklearn.neighbors.quad_tree',
-        'sklearn.tree._utils',
+        'scipy.special',
+        'scipy.linalg',
+        'scipy.spatial',
+        # Tracking
+        'filterpy',
+        'filterpy.kalman',
+        # Utilidades
+        'json',
+        'hashlib',
+        'subprocess',
     ],
     hookspath=[],
     hooksconfig={},

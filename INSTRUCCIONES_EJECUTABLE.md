@@ -6,16 +6,29 @@
 
 ## Método 1: Script Automático (Recomendado)
 
-Simplemente ejecuta el script de construcción:
+### Paso 1: Verificar el proyecto (Opcional pero recomendado)
+
+```powershell
+python verificar_build.py
+```
+
+Este script verifica que todos los archivos necesarios estén presentes:
+- Archivos Python principales
+- Modelos YOLO (.pt)
+- Dependencias instaladas
+- Configuración y documentación
+
+### Paso 2: Construir el ejecutable
 
 ```powershell
 python build_exe.py
 ```
 
 Este script:
-1. Verifica que PyInstaller esté instalado
-2. Limpia builds anteriores
-3. Construye el ejecutable con todas las configuraciones necesarias
+1. Verifica archivos requeridos y modelos YOLO
+2. Verifica que PyInstaller esté instalado
+3. Limpia builds anteriores
+4. Construye el ejecutable con todas las configuraciones necesarias
 
 ## Método 2: Manual con PyInstaller
 

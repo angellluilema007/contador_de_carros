@@ -17,17 +17,50 @@ def build_executable():
     
     print("=" * 60)
     print("CONSTRUCCIÓN DEL EJECUTABLE - CONTADOR DE CARROS")
+    print("Copyright (c) 2025 Angel Lluilema")
     print("=" * 60)
     
+    # Verificar archivos requeridos
+    print("\nVerificando archivos requeridos...")
+    required_files = [
+        'main.py', 'login.py', 'paravideo.py', 'coordinates.py', 
+        'count_cars.py', 'sort.py', 'usuarios.json', 'contador_de_carros.spec'
+    ]
+    
+    missing_files = []
+    for file in required_files:
+        if os.path.exists(file):
+            print(f"  ✓ {file}")
+        else:
+            print(f"  ✗ {file} - NO ENCONTRADO")
+            missing_files.append(file)
+    
+    if missing_files:
+        print(f"\n✗ ERROR: Faltan archivos requeridos: {', '.join(missing_files)}")
+        sys.exit(1)
+    
+    # Verificar modelos YOLO (al menos uno)
+    print("\nVerificando modelos YOLO...")
+    yolo_models = ['yolo11m.pt', 'yolo11n.pt', 'yolov8m.pt', 'yolov5n.pt']
+    found_models = [m for m in yolo_models if os.path.exists(m)]
+    
+    if not found_models:
+        print("  ⚠ ADVERTENCIA: No se encontraron modelos YOLO (.pt)")
+        print("  El ejecutable se creará pero necesitarás agregar los modelos manualmente.")
+    else:
+        for model in found_models:
+            print(f"  ✓ {model}")
+    
     # Verificar que PyInstaller esté instalado
+    print("\nVerificando PyInstaller...")
     try:
         import PyInstaller
-        print("✓ PyInstaller encontrado")
+        print("  ✓ PyInstaller encontrado")
     except ImportError:
-        print("✗ PyInstaller no está instalado")
-        print("Instalando PyInstaller...")
+        print("  ✗ PyInstaller no está instalado")
+        print("  Instalando PyInstaller...")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "pyinstaller"])
-        print("✓ PyInstaller instalado")
+        print("  ✓ PyInstaller instalado")
     
     # Limpiar builds anteriores
     print("\nLimpiando builds anteriores...")
@@ -54,8 +87,19 @@ def build_executable():
         print("=" * 60)
         print("\nEl ejecutable se encuentra en:")
         print("  dist/ContadorDeCarros/ContadorDeCarros.exe")
-        print("\nPuedes distribuir toda la carpeta 'dist/ContadorDeCarros/'")
-        print("que contiene el ejecutable y todos los archivos necesarios.")
+        print("\nContenido del paquete:")
+        print("  ✓ Ejecutable principal")
+        print("  ✓ Bibliotecas Python necesarias")
+        print("  ✓ Modelos YOLO (.pt)")
+        print("  ✓ Recursos y configuración")
+        print("  ✓ Licencias y documentación")
+        print("\n📦 Distribución:")
+        print("  Puedes distribuir toda la carpeta 'dist/ContadorDeCarros/'")
+        print("  o crear un ZIP con todo su contenido.")
+        print("\n⚠️  Importante:")
+        print("  - La carpeta 'recursos/videos/' debe contener los videos a analizar")
+        print("  - Los resultados se guardarán en 'resultados/'")
+        print("\nDesarrollado por Angel Lluilema © 2025")
         
     except subprocess.CalledProcessError as e:
         print("\n" + "=" * 60)
